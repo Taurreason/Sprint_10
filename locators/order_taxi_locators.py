@@ -78,7 +78,6 @@ class FormLocators:
 
     # --- Требования к заказу: шапка/контейнер ---
     REQS_CONTAINER  = (By.CSS_SELECTOR, '.form .reqs')
-    # REQS_HEADER       = (By.CSS_SELECTOR, '.form .reqs .reqs-header')
     REQS_OPEN       = (By.CSS_SELECTOR, '.form .reqs.open')
     REQS_ARROW      = (By.CSS_SELECTOR, '.form .reqs .reqs-header .reqs-arrow')
 
@@ -88,44 +87,6 @@ class FormLocators:
     '/ancestor::div[contains(@class,"r-sw-container")]'
     '//span[contains(@class,"slider")]'
     )
-
-
-# class RequirementsLocators:
-#     # шапка блока
-#     PANEL_TOGGLE = (By.XPATH, "//*[contains(@class,'type') and contains(@class,'picker')]"
-#                                "//*[contains(@class,'requirements') or .//text()[contains(.,'Требования к заказу')]]"
-#                                " | //*[contains(@class,'requirements') and .//text()[contains(.,'Требования к заказу')]]")
-
-#     # контейнер раскрытого блока (fallback по тексту/классам)
-#     PANEL_BODY = (By.XPATH, "//*[contains(@class,'requirements') and not(contains(@class,'hidden'))]"
-#                             " | //*[.//text()[contains(.,'Требования к заказу')]]/ancestor::*[contains(@class,'picker')][1]")
-
-    # --- Элементы по названию пункта (работают для любого тарифа) ---
-
-    # переключатель (toggle) по подписи
-    # @staticmethod
-    # def TOGGLE_BY_LABEL(label: str):
-    #     return (By.XPATH, f"//*[normalize-space()='{label}']"
-    #                       f"/following::*[self::button or self::*[name()='button'] or self::div or self::span]"
-    #                       f"[contains(@class,'switch') or contains(@class,'toggle') or @role='switch'][1]")
-
-    # # минус, значение и плюс у счётчика по подписи (например «Пломбир»)
-    # @staticmethod
-    # def COUNTER_MINUS(label: str):
-    #     return (By.XPATH, f"//*[normalize-space()='{label}']"
-    #                       f"/following::*[self::button or self::span][normalize-space()='−' or normalize-space()='-'][1]")
-
-    # @staticmethod
-    # def COUNTER_PLUS(label: str):
-    #     return (By.XPATH, f"//*[normalize-space()='{label}']"
-    #                       f"/following::*[self::button or self::span][normalize-space()='+'][1]")
-
-    # @staticmethod
-    # def COUNTER_VALUE(label: str):
-    #     return (By.XPATH, f"//*[normalize-space()='{label}']"
-    #                       f"/following::*[self::span or self::div or self::input][contains(@class,'value') or @role='spinbutton' or number(.)=number(.)][1]")
-    
-
 
 class OrderHeaderLocators:
     HEADER        = (By.CSS_SELECTOR, ".order-header-content")

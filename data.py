@@ -1,6 +1,4 @@
 from dataclasses import dataclass, field
-from pathlib import Path
-from typing import List
 from typing import Optional
 
 
@@ -117,6 +115,3 @@ class TestData:
         payment='',
         comment= '123'
     )
-
-
-# cases = list(TestData.TARIFFS.items())

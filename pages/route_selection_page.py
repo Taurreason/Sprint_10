@@ -50,7 +50,6 @@ class Types(BasePage):
     
     def select(self, t: MoveType):
         name = self._name(t)
-        # self.wait_for_element_visibility(TypesLocators.BY_MOVE_TYPE(name))
         self.alt_click(TypesLocators.BY_MOVE_TYPE(name))
 
     def is_active(self, t: MoveType | str):
@@ -99,6 +98,3 @@ class DriveActions(BasePage):
     def is_book_drive_enabled(self):
         return self.is_enabled(DriveLocators.BOOK_BUTTON)
     
-
-
-

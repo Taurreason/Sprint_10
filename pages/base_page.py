@@ -138,11 +138,3 @@ class BasePage:
         """Надёжно найти ReactTooltip по id, дождаться видимости."""
         locator = (By.CSS_SELECTOR, f'#{tip_id}.__react_component_tooltip, [id="{tip_id}"].__react_component_tooltip')
         return self.find(locator)
-    
-    # def js_is_following(self, a, b):
-    #     # a находится в документе ПОСЛЕ b (DOM-порядок)
-    #     return self.driver.execute_script("return !!(arguments[0].compareDocumentPosition(arguments[1]) & 4);", b, a)
-    
-    # def js_contains(self, ancestor, child):
-    #     return self.driver.execute_script("return arguments[0].contains(arguments[1]);", ancestor, child)
-    

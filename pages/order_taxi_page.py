@@ -35,7 +35,7 @@ class OrderTaxiPage(BasePage):
 class Tariffs(BasePage):
 
     @staticmethod
-    def _title(tariff):  # Tariff | str -> str
+    def _title(tariff):
         return tariff.value if hasattr(tariff, "value") else str(tariff)
 
     def ensure_selected(self, title: str):
@@ -135,18 +135,6 @@ class OrderForm(BasePage):
 
     def get_price_text(self):
         return self.find(InfoLocators.PRICE).text.strip()
-
-    # def get_price_value(self):
-    #     # из «Такси ~ 181 руб.» достаём 181
-    #     text = self.get_price_text()
-    #     digits = "".join(ch for ch in text if ch.isdigit())
-    #     return int(digits) if digits else None
-
-    # def get_duration_minutes(self):
-    #     # из «В пути 3 мин.» достаём 3
-    #     text = self.find(InfoLocators.DURATION).text.strip()
-    #     digits = "".join(ch for ch in text if ch.isdigit())
-    #     return int(digits) if digits else None 
 
 class OrderTaxiPopup(BasePage):
 

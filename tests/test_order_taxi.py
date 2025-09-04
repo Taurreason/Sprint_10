@@ -95,4 +95,3 @@ class TestOrderTaxi:
     def test_cancel_order_taxi(self, completed_order_taxi, order_taxi):
         order_taxi.completed.click_cancel_button_in_order_taxi_popup()
         assert order_taxi.popup.check_header_order_taxi_popup() == False
-

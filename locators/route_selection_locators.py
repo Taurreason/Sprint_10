@@ -40,15 +40,6 @@ class TypesLocators:
             f"[.//img[contains(@class,'type-icon') and contains(@src,'/{move_type}-active')]]"
         )
 
-    # @staticmethod
-    # def BY_MOVE_TYPE(move_type: str):
-    #     # move_type: 'car', 'walk', 'taxi', 'bike', 'scooter', 'drive'
-    #     return (By.CSS_SELECTOR, f".type-picker.shown .types-container .type.{move_type}")
-
-    # @staticmethod
-    # def BY_MOVE_TYPE_ACTIVE(move_type: str):
-    #     return (By.CSS_SELECTOR, f".type-picker.shown .types-container .type.{move_type}.active")
-    
 class InfoLocators:
     PRICE    = (By.XPATH, "//div[contains(@class,'results-text')]/div[contains(@class,'text')]")
     DURATION = (By.XPATH, "//div[contains(@class,'results-text')]/div[contains(@class,'duration')]")

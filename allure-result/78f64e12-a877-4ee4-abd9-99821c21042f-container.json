@@ -1,0 +1,1 @@
+{"uuid": "9ffb1822-98d2-43a4-b3e9-7fb1feadb999", "children": ["49655920-ba62-4c3f-97c2-7c705b351184"], "befores": [{"name": "route_selection", "status": "passed", "steps": [{"name": "Открываем блок выбора маршрута", "status": "passed", "start": 1756993438128, "stop": 1756993438128}], "start": 1756993438128, "stop": 1756993438128}], "start": 1756993438128, "stop": 1756993438462}
